@@ -3,15 +3,106 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WTF: Webpack starter kit</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <title>Text editor</title>
+
+    
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+      integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S"
+      crossorigin="anonymous"
+    />
+    
   </head>
   <body>
-    <div class="hello">
-      <img class="hello__logo" src="../assets/img/logo.svg" alt="WTF " />
-      <span class="hello__circles"></span>
+    <main class="main">
+      <header class="header">
+        <h1 class="header__title header--js">Text editor </h1>
+      </header>
+<section class="editor">
+<h2 class="editor__tite">
+  Your message
+</h2>
+
+<div class="message">
+  <p class="message__paragraph">
+    <label class="message__label" for="text"></label>
+    <textarea class=" message__text message--js" name="text" id="text">
+Write your thoughts down...</textarea
+    >
+  </p>
+</div>
+
+<div class="storage">
+  <button class="storage__button" type="button">SAVE</button>
+  <button class="storage__button" type="button">LOAD</button>
+</div>
+</section>
+
+<aside class="edit">
+  <div class="do">
+  <button class="do__undo undo--js" type="button"><i class="fas fa-undo"></i></button>
+  <button class="do__redo redo--js" type="button"><i class="fas fa-redo"></i></button>
+</div>
+
+<div class="font">
+  <button class="font__size up--js" type="button"><i class="fas fa-undo"></i></button>
+  <button class="font__size down--js" type="button"><i class="fas fa-redo"></i></button>
+
+    <p class="font__paragraph">
+      <label class="font__label" for=""></label>
+      <select class="font__list select--js" name="font-type" id="font">
+        <option value="font-type-1" setected>Arial</option>
+        <option value="font-type-2">Times New Roman</option>
+        <option value="font-type-3">Verdana</option>
+      </select>
+    </p>
+  
+    
+
+  <p class="font__paragraph">
+    <label class="font__label"
+      >
+      <input
+        class="font__item color--js"
+        type="color"
+        id="color"
+      />
+    </label>
+  </p>
+</div>
+
+<div class="decoration">
+  <button class="decoration__button bold--js" type="button">B</button>
+  <button class="decoration__button underline--js" type="button">U</button>
+  <button class=" decoration__button italic--js" type="button"><i>I</i></button>
+</div>
+
+<div class="other">
+  <p class="other__paragraph">
+    <label class="other__label" for="aligmnet"></label>
+    <select class="other__list" name="aligment" id="aligment">
+      
+      <option value="align-1">Align center</option>
+      <option value="align-2" >Align left</option>
+      <option value="align-3">Align right</option>
+      <option value="align-4">Jutify</option>
+      
+    </select>
+  </p>
+
+  <button class="" type="button"></button>
+</div>
+
+</aside>
+
+
+<footer class="footer">Made by Anna 2020</footer>
+
+
+      
+    </main>
     </div>
   </body>
 </html>
