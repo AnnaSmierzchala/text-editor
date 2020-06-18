@@ -13,16 +13,21 @@
       integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S"
       crossorigin="anonymous"
     />
+
+    <link href="https://fonts.googleapis.com/css2?family=Lemonada&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+
     
   </head>
   <body>
     <main class="main">
       <header class="header">
-        <h1 class="header__title header--js">Text editor </h1>
+        <h1 class="header__title header--js">Text editor <i class="far fa-edit"></i> </h1>
+        
+
       </header>
 <section class="editor">
-<h2 class="editor__tite">
-  Your message
+<h2 class="editor__title">
+  Your message:
 </h2>
 
 <div class="message">
@@ -35,27 +40,25 @@ Write your thoughts down...</textarea
 </div>
 
 <div class="storage">
-  <button class="storage__button" type="button">SAVE</button>
-  <button class="storage__button" type="button">LOAD</button>
+  <button class="storage__button save--js" type="button">SAVE</button>
+  <button class="storage__button load--js" type="button">LOAD</button>
+  <button class="storage__button clear--js" type="button">CLEAR</button>
+   <button class="storage__button refresh--js" type="button">REFRESH</button>
 </div>
 </section>
 
 <aside class="edit">
-  <div class="do">
-  <button class="do__undo undo--js" type="button"><i class="fas fa-undo"></i></button>
-  <button class="do__redo redo--js" type="button"><i class="fas fa-redo"></i></button>
-</div>
 
 <div class="font">
-  <button class="font__size up--js" type="button"><i class="fas fa-undo"></i></button>
-  <button class="font__size down--js" type="button"><i class="fas fa-redo"></i></button>
+  <button class="font__size up--js" type="button"><strong>A</strong><i class="fas fa-long-arrow-alt-up"></i></button>
+  <button class="font__size down--js" type="button"><strong>A</strong><i class="fas fa-long-arrow-alt-down"></i></button>
 
     <p class="font__paragraph">
-      <label class="font__label" for=""></label>
-      <select class="font__list select--js" name="font-type" id="font">
-        <option value="font-type-1" setected>Arial</option>
-        <option value="font-type-2">Times New Roman</option>
-        <option value="font-type-3">Verdana</option>
+      <label class="font__label" for="font"></label>
+      <select class="font__list select--js" name="font" id="font">
+        <option value="arial" setected>Arial</option>
+        <option value="times new roman">Times New Roman</option>
+        <option value="verdana">Verdana</option>
       </select>
     </p>
   
@@ -67,7 +70,7 @@ Write your thoughts down...</textarea
       <input
         class="font__item color--js"
         type="color"
-        id="color"
+        id="color" 
       />
     </label>
   </p>
@@ -82,17 +85,17 @@ Write your thoughts down...</textarea
 <div class="other">
   <p class="other__paragraph">
     <label class="other__label" for="aligmnet"></label>
-    <select class="other__list" name="aligment" id="aligment">
+    <select class="other__list aligment--js" name="aligment" id="aligment">
       
-      <option value="align-1">Align center</option>
-      <option value="align-2" >Align left</option>
-      <option value="align-3">Align right</option>
-      <option value="align-4">Jutify</option>
+      <option value="center">Center</option>
+      <option value="left" >Align left</option>
+      <option value="right">Align right</option>
+      <option value="justify">Jutify</option>
       
     </select>
   </p>
 
-  <button class="" type="button"></button>
+  <button class="other__button switch--js" type="button"></button>
 </div>
 
 </aside>
