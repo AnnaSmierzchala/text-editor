@@ -2,7 +2,6 @@
 @import "_variables";
 @import "modules/hello.scss";
 
-
 html {
   box-sizing: border-box;
 }
@@ -11,13 +10,19 @@ html {
 *:after {
   box-sizing: inherit;
 }
+@mixin buttonStyle {
+  border-radius: 10px;
+  border: #444444 solid 1px;
+  padding: 8px;
+  font-weight: bold;
+  font-size: 14px;
+}
 
 :root {
   --my-background: #b9f89c;
   --my-color: #666666;
   --other-color: #666666;
   --new-color: #444444;
-
 }
 body {
   background: var(--my-background);
@@ -26,8 +31,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  font-family: 'Roboto Slab', serif;
-  
+  font-family: "Roboto Slab", serif;
 }
 
 .main {
@@ -35,7 +39,6 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 40px;
-  
 }
 
 .header {
@@ -43,18 +46,16 @@ body {
   padding-top: 10px;
   font-size: 20px;
   letter-spacing: 2px;
-  
 }
 
 .editor {
   grid-column: 4/10;
   display: grid;
-  
 }
 
 .editor__title {
   letter-spacing: 2px;
- 
+
   margin-bottom: 0;
   font-size: 28px;
 }
@@ -68,7 +69,8 @@ body {
   border-top: #444444 solid 1px;
   @media (min-width: 1024px) {
     margin-top: 50px;
-  }}
+  }
+}
 
 .edit {
   grid-column: 10/11;
@@ -76,26 +78,21 @@ body {
   justify-content: center;
   flex-direction: column;
   margin-top: 55px;
-  
- 
 }
-
-
 
 .message__text {
   width: 100%;
   height: 300px;
-  font-family: 'Lemonada', cursive;
+  font-family: "Lemonada", cursive;
   border-radius: 10px;
   color: var(--new-color);
-  -webkit-box-shadow: 6px 22px 42px -5px rgba(0,0,0,0.75);
-  -moz-box-shadow: 6px 22px 42px -5px rgba(0,0,0,0.75);
-  box-shadow: 6px 22px 42px -5px rgba(0,0,0,0.75);
- 
+  -webkit-box-shadow: 6px 22px 42px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 22px 42px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 22px 42px -5px rgba(0, 0, 0, 0.75);
 }
 
 .under--js {
-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .storage {
@@ -104,24 +101,21 @@ text-decoration: underline;
   display: flex;
   position: relative;
   justify-content: flex-end;
-  
-  
 }
 
 .storage__button {
   margin-left: 15px;
-  padding: 10px 15px; 
+  padding: 10px 15px;
   font-weight: bold;
   letter-spacing: 1px;
   border-radius: 10px;
   border: solid #444444 1px;
   background: white;
   color: var(--other-color);
-   margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .storage__button--other {
-  
 }
 
 .storage__button--hidden {
@@ -132,106 +126,73 @@ text-decoration: underline;
 
   @media (min-width: 1024px) {
     visibility: hidden;
-    
-}}
-
-
-
-.storage__list {
-  display: none;  
-  @media (min-width: 1024px) {
-  display: flex;
- 
-
-}}
-
-
-.new--js {
-display: block;
- margin-top: 50px;
- display: flex;
- flex-direction: column;
- align-items: flex-end;
-
- font-size: 12px;
+  }
 }
 
+.storage__list {
+  display: none;
+  @media (min-width: 1024px) {
+    display: flex;
+  }
+}
 
+.new--js {
+  display: block;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  font-size: 12px;
+}
 
 .storage__list-item {
   list-style-type: none;
 }
 
 .decoration__button {
-  border-radius: 10px;
-  border: #444444 solid 1px;
-    padding: 8px;
-    font-weight: bold;
-    font-size: 18px;
-    background: white;
-    color: var(--other-color);
+  @include buttonStyle;
+  background: white;
+  color: var(--other-color);
 }
 
 .font__item {
   border-radius: 10px;
   border: #444444 solid 1px;
-   padding: 5px;
+  padding: 5px;
   background: white;
   height: 34px;
-  
-  
-  
 }
 
 .font__size {
-  border-radius: 10px;
-  border: #444444 solid 1px;
-  padding: 8px;
-  font-weight: bold;
-    font-size: 18px;
-    background: white;
-    color: var(--other-color);
-}
+  @include buttonStyle;
+  background: white;
+  color: var(--other-color);
+  @media (min-width: 1024px){
+font-size: 18px;
+}}
 
 .font__list {
-  border-radius: 10px;
-  border: #444444 solid 1px;
-  padding: 8px;
-  font-weight: bold;
+  @include buttonStyle;
+  width: 100px;
+  color: var(--other-color);
+  @media (min-width: 1024px){
     font-size: 18px;
-    width: 100px;
-    color: var(--other-color);
-}
+    }}
 
 .other__list {
-  border-radius: 10px;
-  border: #444444 solid 1px;
-  padding: 8px;
-  font-weight: bold;
+  @include buttonStyle;
+  width: 100px;
+  color: var(--other-color);
+  @media (min-width: 1024px){
     font-size: 18px;
-    width: 100px;
-    color: var(--other-color);
-
-}
+    }}
 
 .other__button {
-  border-radius: 10px;
-  border: #444444 solid 1px;
-  padding: 8px;
-  font-weight: bold;
+  @include buttonStyle;
+  background: white;
+  color: var(--other-color);
+  @media (min-width: 1024px){
     font-size: 18px;
-    background: white;
-    color: var(--other-color);
-}
-
-
-
-
-
-
-
-
-
-
-
+    }}
 
