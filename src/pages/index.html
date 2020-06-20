@@ -38,14 +38,19 @@ Write your thoughts down...</textarea
     >
   </p>
 </div>
-
-<div class="storage">
-  <button class="storage__button save--js" type="button">SAVE</button>
-  <button class="storage__button load--js" type="button">LOAD</button>
-  <button class="storage__button clear--js" type="button">CLEAR</button>
-   <button class="storage__button refresh--js" type="button">REFRESH</button>
-</div>
 </section>
+
+<section class="storage">
+<h2 class="storage__title"></h2>
+<button class="storage__button storage__button--hidden all--js" type="button">LOCAL STORAGE</button>
+<ul class="storage__list storage--js">
+ <li class="storage__list-item"> <button class="storage__button save--js" type="button">SAVE</button> </li>
+ <li class="storage__list-item"> <button class="storage__button load--js" type="button">LOAD</button> </li>
+ <li class="storage__list-item"> <button class="storage__button clear--js" type="button">CLEAR</button> </li>
+  <li class="storage__list-item"> <button class="storage__button storage__button--other refresh--js" type="button">REFRESH</button> </li>
+</ul>
+</section>
+
 
 <aside class="edit">
 

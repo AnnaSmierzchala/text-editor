@@ -2,10 +2,22 @@
 @import "_variables";
 @import "modules/hello.scss";
 
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 :root {
   --my-background: #b9f89c;
   --my-color: #666666;
   --other-color: #666666;
+  --new-color: #444444;
+
 }
 body {
   background: var(--my-background);
@@ -37,6 +49,7 @@ body {
 .editor {
   grid-column: 4/10;
   display: grid;
+  
 }
 
 .editor__title {
@@ -48,21 +61,24 @@ body {
 
 .footer {
   grid-column: 3/11;
+  grid-row: 4/5;
   text-align: center;
   margin-top: 50px;
   padding: 20px;
   border-top: #444444 solid 1px;
-  }
+  @media (min-width: 1024px) {
+    margin-top: 50px;
+  }}
 
 .edit {
   grid-column: 10/11;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: flex-start;
+  margin-top: 55px;
+  
  
 }
-
 
 
 
@@ -71,12 +87,10 @@ body {
   height: 300px;
   font-family: 'Lemonada', cursive;
   border-radius: 10px;
-  color: #444444;
+  color: var(--new-color);
   -webkit-box-shadow: 6px 22px 42px -5px rgba(0,0,0,0.75);
   -moz-box-shadow: 6px 22px 42px -5px rgba(0,0,0,0.75);
   box-shadow: 6px 22px 42px -5px rgba(0,0,0,0.75);
-  
-
  
 }
 
@@ -85,8 +99,12 @@ text-decoration: underline;
 }
 
 .storage {
+  grid-row: 3/4;
+  grid-column: 4/10;
   display: flex;
+  position: relative;
   justify-content: flex-end;
+  
   
 }
 
@@ -99,8 +117,49 @@ text-decoration: underline;
   border: solid #444444 1px;
   background: white;
   color: var(--other-color);
+   margin-bottom: 5px;
+}
+
+.storage__button--other {
+  
+}
+
+.storage__button--hidden {
+  position: absolute;
+  top: 5px;
+  right: 1px;
+  font-size: 14px;
+
+  @media (min-width: 1024px) {
+    visibility: hidden;
+    
+}}
 
 
+
+.storage__list {
+  display: none;  
+  @media (min-width: 1024px) {
+  display: flex;
+ 
+
+}}
+
+
+.new--js {
+display: block;
+ margin-top: 50px;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-end;
+
+ font-size: 12px;
+}
+
+
+
+.storage__list-item {
+  list-style-type: none;
 }
 
 .decoration__button {
@@ -116,8 +175,10 @@ text-decoration: underline;
 .font__item {
   border-radius: 10px;
   border: #444444 solid 1px;
-  padding: 8px;
+   padding: 5px;
   background: white;
+  height: 34px;
+  
   
   
 }

@@ -68,7 +68,10 @@ const textColor = document.querySelector('.color--js')
 
 function changeColor () {
     const color = textColor.value;
-    textMessage.style.color = color;
+
+    textMessage.style.setProperty('--new-color', color)
+
+    //textMessage.style.color = color;
 }
 textColor.addEventListener('input', changeColor)
 
@@ -80,7 +83,10 @@ textColor.addEventListener('input', changeColor)
     const fontFamily = document.querySelector('.select--js')
     function selectFont() {
         const selector = document.getElementById('font');
-        const value = selector[selector.selectedIndex].value;
+        const sel = selector.selectedIndex //znajdujemy index , ktory element jest wybrany
+        const value = selector[sel].value //wez mi ta opcje, wez mi ta value
+        console.log(sel)
+        //const value = selector[selector.selectedIndex].value;
         textMessage.style.fontFamily = value;
     }
 
@@ -206,6 +212,8 @@ function onClear () {
 localStorage.removeItem('entry');
 myTextarea.value = myText
 
+//moge tez zwrocic null albo pusty string
+
 
 }
 
@@ -224,3 +232,12 @@ btnRefresh.addEventListener('click', onRefresh)
 // const textMessage = document.querySelector('.message--js)
 
 
+const btnLocalStorage = document.querySelector('.all--js')
+
+const storage = document.querySelector('.storage--js')
+
+function makeOneButton () {
+    storage.classList.toggle('new--js')
+}
+
+btnLocalStorage.addEventListener('click', makeOneButton)
