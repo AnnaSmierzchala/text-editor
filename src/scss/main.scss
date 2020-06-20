@@ -16,6 +16,7 @@ html {
   padding: 8px;
   font-weight: bold;
   font-size: 14px;
+  background: white;
 }
 
 :root {
@@ -152,7 +153,6 @@ body {
 
 .decoration__button {
   @include buttonStyle;
-  background: white;
   color: var(--other-color);
 }
 
@@ -166,7 +166,6 @@ body {
 
 .font__size {
   @include buttonStyle;
-  background: white;
   color: var(--other-color);
   @media (min-width: 1024px){
 font-size: 18px;
@@ -190,7 +189,7 @@ font-size: 18px;
 
 .other__button {
   @include buttonStyle;
-  background: white;
+  
   color: var(--other-color);
   @media (min-width: 1024px){
     font-size: 18px;
