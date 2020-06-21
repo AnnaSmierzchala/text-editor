@@ -241,3 +241,9 @@ function makeOneButton () {
 }
 
 btnLocalStorage.addEventListener('click', makeOneButton)
+
+//################################################
+
+const animation = document.querySelector('.icon')
+
+animation.classList.add('icon--animated')
