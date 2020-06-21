@@ -165,7 +165,7 @@ button.addEventListener('click', function() {
     document.documentElement.style.setProperty(`--my-background`, `#b9f89c`);
         document.documentElement.style.setProperty(`--my-color`, `#666666`);
         document.documentElement.style.setProperty(`--other-color`, `#666666`);
-        document.documentElement.style.setProperty(`--hover`, `green`);
+        document.documentElement.style.setProperty(`--hover`, `#70ee85`);
     
     switchMode ('.switch--js', 'PINK')
     isPink = false;
