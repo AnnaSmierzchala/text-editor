@@ -155,6 +155,7 @@ button.addEventListener('click', function() {
         document.documentElement.style.setProperty(`--my-background`, `#fcd6ed`);
     document.documentElement.style.setProperty(`--my-color`, `black`);
     document.documentElement.style.setProperty(`--other-color`, `black`);
+    document.documentElement.style.setProperty(`--hover`, `pink`);
 
         switchMode ('.switch--js', 'GREEN')
         isPink = true;
@@ -164,6 +165,7 @@ button.addEventListener('click', function() {
     document.documentElement.style.setProperty(`--my-background`, `#b9f89c`);
         document.documentElement.style.setProperty(`--my-color`, `#666666`);
         document.documentElement.style.setProperty(`--other-color`, `#666666`);
+        document.documentElement.style.setProperty(`--hover`, `green`);
     
     switchMode ('.switch--js', 'PINK')
     isPink = false;
